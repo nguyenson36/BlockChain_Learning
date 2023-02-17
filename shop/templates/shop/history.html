@@ -1,0 +1,102 @@
+@extends('frontend.layouts.app')
+
+@section('content')
+
+<div class="contract">
+    <div class="content">
+        <div class="image">
+            <img
+                src="https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80"
+                alt="Technology"
+            />
+        </div>
+        <form action="" id="form">
+            <div class="box-center">
+                <div class="box-input">
+                    <label for="address">CONTRACT ADDRESS </label>
+                    <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="Ox..."
+                    />
+                </div>
+                <div class="box-input">
+                    <label for="token">TOKEN ID</label>
+                    <input
+                        type="text"
+                        name="token"
+                        id="token"
+                        placeholder="Your Id..."
+                    />
+                </div>
+
+                <input
+                    type="submit"
+                    value="View transcation history"
+                    id="submit"
+                />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row title-product">
+                    <div class="col-md-12">
+                        <h1 class="title-history">History</h1>
+                    </div>
+                </div>
+
+                @for ($i = 0; $i < 8; $i++)
+                    <div class="row history">
+                        <div class="col-md-9">
+                            <div class="NFT">
+                                <img src="https://demothemesflat.com/axies/assets/images/avatar/avt-2.jpg" alt="">
+                            </div>
+
+                            <div class="transaction">
+                                <h2 class="buyer">John Switch</h2>
+                                <h3 class="seller"> sold out Willam Jackson</h3>
+                                <p class="timer">At 2:30 PM on 19th June, 2021</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h3>Read more</h3>
+                        </div>
+                    </div>
+                @endfor
+
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="row product">
+                    <div class="avatar">
+                        <img src="https://demothemesflat.com/axies/assets/images/box-item/imgslider2.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+@endsection
+
+
+@push('history')
+    <link rel="stylesheet" href="{{ url('assets/history.css') }}">
+@endpush
+
+
+
+@push('contract')
+    <link rel="stylesheet" href="{{url('assets/contract.css')}}">
+@endpush
